@@ -1,0 +1,50 @@
+<html> 
+    <head> <title>Menu Hambúrguer</title> 
+<style> body { font-family: Arial, sans-serif;
+ margin: 0;
+  padding: 0;
+   } .menu { display: none; 
+   width: 100%; 
+   background-color: #52c5e5;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 1000;
+     } .menu a { display: block; 
+     color: rgba(116, 63, 201, 0.882);
+      padding: 10px; 
+      text-decoration: none; 
+      text-align: center;
+       } .menu a:hover { background-color: #000000; }
+        .hamburger { display: block;
+         position: fixed; 
+         top: 10px; 
+         left: 10px; 
+         cursor: pointer;
+          z-index: 1001;
+           } .bar { width: 25px; 
+           height: 3px; 
+           background-color: #7a73f9;
+            margin: 5px 0;
+             transition: 0.4s;
+              } .change .bar1 { transform: rotate(-45deg) translate(-5px, 6px);
+               } .change .bar2 { opacity: 0; } 
+               .change .bar3 { transform: rotate(45deg) translate(-5px, -6px); }
+                </style> 
+                </head>
+                 <body> <div class="hamburger" onclick="toggleMenu(this)"> <div class="bar bar1"></div> 
+                 <div class="bar bar2"></div>
+                  <div class="bar bar3"></div> 
+                  </div> <div class="menu" id="menu">
+                     <a href="#casa">casa</a>
+                      <a href="#servico">Serviço</a> 
+                     <a href="#sobre">sobre</a>
+                      <a href="#contato">contato</a> </div> 
+                     <script> function toggleMenu(x) { x.classList.toggle("change"); 
+                     var menu = document.getElementById("menu");
+                      if (menu.style.display === "block") { menu.style.display = "none"; }
+                       else { menu.style.display = "block"; } } 
+
+</script>
+ </body>
+  </html>
